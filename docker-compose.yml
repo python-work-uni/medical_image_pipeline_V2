@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  pipeline:
+    build: .
+    image: medical-pipeline:latest
+    container_name: xray-processor
+    
+    # VOLUME MAPPING [cite: 36]
+    # Maps your local 'data' folder to the container's 'data' folder.
+    # Left side = Your laptop. Right side = Inside Docker.
+    volumes:
+      - ./data:/app/data
+      - ./chest_xray_images:/app/chest_xray_images
+
+    # Keep the container alive so you can inspect it if needed
+    stdin_open: true
+    tty: true
