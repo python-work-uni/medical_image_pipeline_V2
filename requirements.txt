@@ -1,0 +1,5 @@
+numpy
+pandas
+opencv-python-headless  <-- "headless" is better for WSL/servers (no GUI)
+scikit-image
+pytest
