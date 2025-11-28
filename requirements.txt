@@ -1,5 +1,5 @@
 numpy
 pandas
-opencv-python-headless  <-- "headless" is better for WSL/servers (no GUI)
+opencv-python-headless
 scikit-image
 pytest
