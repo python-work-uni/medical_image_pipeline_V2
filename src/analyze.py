@@ -45,8 +45,9 @@ def run_analysis_pipeline(input_directory, output_csv_path):
     Iterates through processed data, aggregates results, and saves to CSV.
     """
     # Create output directory if it doesn't exist
-    if not os.path.dirname(output_csv_path):
-        os.makedirs(os.path.dirname(output_csv_path))
+    output_dir = os.path.dirname(output_csv_path)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     results = []
     
